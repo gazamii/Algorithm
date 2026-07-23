@@ -1,11 +1,8 @@
 def solution(intStrs, k, s, l):
+    num=0
     result=[]
     for x in intStrs:
-        answer = []
-        x=list(x)
-        for a in range(s,s+l):
-            answer.append(x[a])
-        answer=int("".join(answer))
-        if answer>k:
-            result.append(answer)
+        num = int(x[s:s+l])
+        if num>k:
+            result.append(num)
     return result
